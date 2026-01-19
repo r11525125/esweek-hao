@@ -80,13 +80,13 @@
 
 ### Overall Latency Comparison
 
-![Case 1 Latency Line](https://raw.githubusercontent.com/r11525125/esweek-hao/main/figures/7.1c1lat_line_with_ML.png)
+![Case 1 Latency Line](./figures/7.1c1lat_line_with_ML.png)
 
 ---
 
 ## 實驗結果：HP Traffic (AC_VO)
 
-![HP Latency](https://raw.githubusercontent.com/r11525125/esweek-hao/main/figures/7.2c1lat_bar_hp_with_ML.png)
+![HP Latency](./figures/7.2c1lat_bar_hp_with_ML.png)
 
 **所有方法都維持 sub-millisecond HP 延遲**
 
@@ -94,7 +94,7 @@
 
 ## 實驗結果：LP Traffic (AC_BK)
 
-![LP Latency](https://raw.githubusercontent.com/r11525125/esweek-hao/main/figures/7.2c1lat_bar_lp_with_ML.png)
+![LP Latency](./figures/7.2c1lat_bar_lp_with_ML.png)
 
 **PBM 比 ML 減少 23% LP 延遲**
 
@@ -102,7 +102,7 @@
 
 ## 實驗結果：Jitter Comparison
 
-![Jitter](https://raw.githubusercontent.com/r11525125/esweek-hao/main/figures/7.7c1jitt_line.png)
+![Jitter](./figures/7.7c1jitt_line.png)
 
 **ML 的 Jitter 表現介於 PBM 和 Non-MU-TXOP 之間**
 
@@ -110,13 +110,13 @@
 
 ## 實驗結果：Average Latency (nWifi=30)
 
-![Average Latency](https://raw.githubusercontent.com/r11525125/esweek-hao/main/figures/7.8c1avg_lat_with_ML.png)
+![Average Latency](./figures/7.8c1avg_lat_with_ML.png)
 
 ---
 
 ## 實驗結果：Case 2 Smart Warehouse
 
-![Case 2 nWifi=30](https://raw.githubusercontent.com/r11525125/esweek-hao/main/figures/8.1c2lat_bar_with_ML.png)
+![Case 2 nWifi=30](./figures/8.1c2lat_bar_with_ML.png)
 
 **移動環境中 ML 延遲增加 78%，泛化能力不足**
 
@@ -124,7 +124,7 @@
 
 ## 實驗結果：Case 2 nWifi=40
 
-![Case 2 nWifi=40](https://raw.githubusercontent.com/r11525125/esweek-hao/main/figures/8.2c2lat_bar_n40_with_ML.png)
+![Case 2 nWifi=40](./figures/8.2c2lat_bar_n40_with_ML.png)
 
 ---
 
