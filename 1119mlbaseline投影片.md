@@ -60,6 +60,59 @@
 
 ---
 
+## ML 的 MU-TXOP Sharing 決策
+
+### Stage 1: Sharing Gate (規則判斷)
+
+| 條件 | 結果 |
+|------|------|
+| 沒有 Secondary 候選 STA | **關閉** MU-TXOP Sharing |
+| Packet Size Ratio > 9 | **關閉** MU-TXOP Sharing |
+| 有候選 + Ratio ≤ 9 | **開啟** → 進入 Stage 2 |
+
+### Stage 2: MLP 選擇 RU 配置
+
+| Output Class | 意義 |
+|--------------|------|
+| Class 0 | Original Mode (不使用 OFDMA) |
+| Class 1 | No Secondary (僅 Primary) |
+| Class 2-10 | 不同 RU 組合的 MU-TXOP Sharing |
+
+**ML 學習「何時開啟」+「如何配置 RU」**
+
+---
+
+## MU-TXOP Sharing 開啟條件
+
+```
+              ┌─────────────────┐
+              │  EDCA 競爭成功   │
+              │  (Primary AC)   │
+              └────────┬────────┘
+                       ↓
+              ┌─────────────────┐
+         No   │ Secondary 候選  │  No
+       ┌──────│    存在？       │──────┐
+       │      └────────┬────────┘      │
+       │               ↓ Yes           │
+       │      ┌─────────────────┐      │
+       │  No  │ Pkt Ratio ≤ 9?  │  No  │
+       │ ┌────│ (時間約束可滿足) │────┐ │
+       │ │    └────────┬────────┘    │ │
+       │ │             ↓ Yes         │ │
+       │ │    ┌─────────────────┐    │ │
+       │ │    │   MLP 決策      │    │ │
+       │ │    │  選擇 RU 配置   │    │ │
+       │ │    └────────┬────────┘    │ │
+       ↓ ↓             ↓             ↓ ↓
+┌──────────────┐  ┌──────────────┐
+│ Non MU-TXOP  │  │  MU-TXOP     │
+│   Sharing    │  │   Sharing    │
+└──────────────┘  └──────────────┘
+```
+
+---
+
 ## Feasibility Mask (關鍵設計)
 
 ### Rule 4: Ratio Consistency
