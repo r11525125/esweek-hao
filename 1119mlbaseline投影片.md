@@ -82,6 +82,10 @@
 
 ![Case 1 Latency Line](https://raw.githubusercontent.com/r11525125/esweek-hao/main/figures/7.1c1lat_line_with_ML.png)
 
+- **ML (紫色)** 延遲介於 PBM 和 MPS 之間
+- STA 數量增加時，ML 延遲成長速度快於 PBM
+- ML 在 LP 流量表現較差，但優於 Non-MU-TXOP
+
 ---
 
 ## 實驗結果：HP Traffic (AC_VO)
@@ -112,6 +116,10 @@
 
 ![Average Latency](https://raw.githubusercontent.com/r11525125/esweek-hao/main/figures/7.8c1avg_lat_with_ML.png)
 
+- **PBM** 整體平均延遲最低
+- **ML** 表現優於 MPS，但不及 PBM
+- ML 的 LP 延遲 (0.58ms) 比 PBM (0.45ms) 高 29%
+
 ---
 
 ## 實驗結果：Case 2 Smart Warehouse
@@ -125,6 +133,10 @@
 ## 實驗結果：Case 2 nWifi=40
 
 ![Case 2 nWifi=40](https://raw.githubusercontent.com/r11525125/esweek-hao/main/figures/8.2c2lat_bar_n40_with_ML.png)
+
+- 高負載 (40 STAs) 時，**ML 的 LP 延遲達 1.81ms**
+- PBM 維持 1.05ms，ML 比 PBM 差 72%
+- 證明 ML 在高負載移動環境泛化能力不足
 
 ---
 
